@@ -14,7 +14,8 @@ def get_word():
     word = w
 
 def game_over():
-    print("\n/////////\nGame over\n/////////")
+    global word
+    print("\n/////////\nGame over\n/////////\n\nThe word was "+word)
 
 def check_win(guess):
     global word
@@ -39,7 +40,7 @@ def game_start():
     print("Wordle")
     print("But more fun")
     while(i!=6):
-        guess = str(input("Guess the 5 letters word\n"))
+        guess = str(input("\nGuess the 5 letters word\n"))
         if(len(guess)!=5):
             i = i-1
         else:
